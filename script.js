@@ -18,7 +18,7 @@ function getTotalVotes(){
 
 function displayResult(){
     const result = document.getElementById("result");
-    result.innerHTML = "";
+    result.innerHTML = ``;
     result.style.display = "block";
     options.forEach((option) => {
         const totalVotes = getTotalVotes();

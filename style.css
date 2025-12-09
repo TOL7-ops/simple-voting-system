@@ -112,12 +112,21 @@ button:active {
 .option-result {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   margin-bottom: 10px;
   animation: fadeIn 0.5s ease forwards;
 }
 
+.option-result:last-child {
+  border-bottom: none;
+}
+
+
 .option-text {
+ /* width: 100px; */
+  font-weight: 600;
+  color: #333;
   min-width: 100px;
 }
 
@@ -133,6 +142,19 @@ button:active {
   background: #4a74f5;
   border-radius: 10px 0 0 10px;
   transition: width 0.5s ease;
+}
+
+span.percentage {
+  min-width: 40px;
+  text-align: right;
+}
+
+.percentage {
+  min-width: 55px;
+  text-align: right;
+  font-weight: 600;
+  color: #4a74f5;
+  white-space: nowrap;
 }
 
 
