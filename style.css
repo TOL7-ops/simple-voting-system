@@ -17,6 +17,7 @@ body {
 
 /* Main container */
 .container {
+    margin: 10%;
   background: #ffffff;
   width: 100%;
   max-width: 450px;
