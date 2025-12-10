@@ -70,7 +70,15 @@ body {
   transform: translateY(-1px);
 }
 
-/* Radio styling (kept simple) */
+.option:active {
+  transform: translateY(0);
+}
+.option label {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
 .option input[type="radio"] {
   width: 18px;
   height: 18px;
