@@ -20,10 +20,12 @@ function displayResult(){
     const result = document.getElementById("result");
     result.innerHTML = ``;
     result.style.display = "block";
+
     options.forEach((option) => {
         const totalVotes = getTotalVotes();
-        const percentage = totalVotes > 0 ? (option.votes / totalVotes) * 100 : 0;
-        const barWidth = percentage > 0 ? `${percentage}%` : "0%";
+        const rawPercent = totalVotes > 0 ? (option.votes / totalVotes) * 100 : 0;
+        const percentage = rawPercent.toFixed(1);   // <-- clean formatting
+        const barWidth = rawPercent + "%";
 
         const optionResult = document.createElement("div");
         optionResult.className = "option-result";
@@ -35,7 +37,7 @@ function displayResult(){
         <span class="percentage">${percentage}%</span>
         `;
         result.appendChild(optionResult);
-    })
+    });
 }
 
 function submitVote() {
